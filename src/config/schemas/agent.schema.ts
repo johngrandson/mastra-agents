@@ -3,6 +3,10 @@ import { z } from 'zod';
 export const agentSchema = z.object({
   id: z.string().min(1, 'Agent ID is required'),
   tenantId: z.string().min(1, 'Tenant ID is required'),
+
+  // Template reference (optional)
+  templateId: z.string().optional(),
+
   name: z.string().min(1, 'Agent name is required'),
   prompt: z.string().min(1, 'Prompt is required'),
   instructions: z.array(z.string()),
@@ -12,6 +16,9 @@ export const agentSchema = z.object({
     model: z.string().min(1, 'Model is required'),
     temperature: z.number().min(0).max(2),
   }),
+
+  // Custom overrides for template variables
+  templateOverrides: z.record(z.any()).optional(),
 });
 
 export type AgentConfig = z.infer<typeof agentSchema>;
