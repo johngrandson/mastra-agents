@@ -78,7 +78,7 @@ const checkAvailability = async (
   if (!matchingDentists || matchingDentists.length === 0) {
     return {
       availableSlots: [],
-      message: `Nenhum dentista encontrado para a especialidade: ${specialty} na ORTOFACCIA`,
+      message: `Nenhum dentista encontrado para a especialidade: ${specialty} na Ortofaccia`,
     };
   }
 
@@ -108,12 +108,12 @@ const checkAvailability = async (
   if (availableSlots.length === 0) {
     return {
       availableSlots: [],
-      message: `Nenhum horário disponível para ${specialty} em ${preferredDate} na ORTOFACCIA. Tente outra data dentro da janela de 2-7 dias úteis.`,
+      message: `Nenhum horário disponível para ${specialty} em ${preferredDate} na Ortofaccia. Tente outra data dentro da janela de 2-7 dias úteis.`,
     };
   }
 
   return {
     availableSlots,
-    message: `Encontrados ${availableSlots.length} horários disponíveis para ${specialty} na ORTOFACCIA. Capacidade da clínica: ~15 consultas/dia.`,
+    message: `Encontrados ${availableSlots.length} horários disponíveis para ${specialty} na Ortofaccia. Capacidade da clínica: ~15 consultas/dia.`,
   };
 };

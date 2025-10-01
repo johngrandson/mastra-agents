@@ -9,7 +9,7 @@ import { getTenant } from '../../config';
  * Searches the knowledge base specific to a tenant
  */
 export async function createRAGTool(tenantId: string) {
-  const tenant = await getTenant(tenantId);
+  const tenant = getTenant(tenantId);
   const vectorStore = new TenantVectorStore(tenantId);
 
   return createTool({
@@ -131,7 +131,7 @@ export function formatRAGResultsForAgent(results: {
 }
 
 // Lazy initialization - tool is created on first access
-let ragToolInstance: ReturnType<typeof createRAGTool> | null = null;
+let ragToolInstance: Awaited<ReturnType<typeof createRAGTool>> | null = null;
 
 export async function getRagTool() {
   if (!ragToolInstance) {

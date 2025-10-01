@@ -4,6 +4,7 @@
  */
 
 export type { TenantConfig, AgentConfig } from '../config';
+export type { Appointment } from './appointment';
 
 export interface EmbeddedChunk {
   text: string;

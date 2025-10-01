@@ -7,7 +7,7 @@ import { getAllAgents } from '../config';
 
 // Create all agents dynamically from agent configs (async)
 async function createTenantAgents() {
-  const agentConfigs = await getAllAgents();
+  const agentConfigs = getAllAgents();
   const agents: Record<string, any> = {};
 
   for (const agentConfig of agentConfigs) {
@@ -37,9 +37,6 @@ async function createMastraInstance() {
     }),
     telemetry: {
       serviceName: 'mastra-agents',
-      sampling: {
-        enabled: true,
-      },
     },
   });
 }

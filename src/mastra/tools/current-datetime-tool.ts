@@ -4,7 +4,7 @@ import { getCurrentDateTime, isBusinessDay } from '../../utils/date-time';
 import { getTenant } from '../../config';
 
 export async function createCurrentDateTimeTool(tenantId: string) {
-  const tenant = await getTenant(tenantId);
+  const tenant = getTenant(tenantId);
   const timezone = tenant.business.timezone;
 
   return createTool({
@@ -47,7 +47,8 @@ export async function createCurrentDateTimeTool(tenantId: string) {
 }
 
 // Lazy initialization for backward compatibility
-let currentDateTimeToolInstance: ReturnType<typeof createCurrentDateTimeTool> | null = null;
+let currentDateTimeToolInstance: Awaited<ReturnType<typeof createCurrentDateTimeTool>> | null =
+  null;
 
 export async function getCurrentDateTimeTool() {
   if (!currentDateTimeToolInstance) {

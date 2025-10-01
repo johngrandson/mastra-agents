@@ -11,7 +11,7 @@ const appointmentRepository = new InMemoryAppointmentRepository();
  * Factory function to create check patient appointments tool for a specific tenant
  */
 export async function createCheckPatientAppointmentsTool(tenantId: string) {
-  const tenant = await getTenant(tenantId);
+  const tenant = getTenant(tenantId);
 
   return createTool({
     id: 'check-patient-appointments',
@@ -67,4 +67,3 @@ export async function createCheckPatientAppointmentsTool(tenantId: string) {
     },
   });
 }
-

@@ -130,6 +130,8 @@ const checkAvailability = createStep({
         specialty: inputData.specialty,
         preferredDate: inputData.preferredDate,
       },
+      runtimeContext: {} as any,
+      suspend: async () => {},
     });
 
     if (availabilityResult.availableSlots.length === 0) {
@@ -172,7 +174,7 @@ const confirmBooking = createStep({
     const slotsText = inputData.availableSlots
       .map(
         (slot, index) =>
-          `${index + 1}. ${slot.doctorName} - ${new Date(slot.dateTime).toLocaleString('en-US', {
+          `${index + 1}. ${slot.dentistName} - ${new Date(slot.dateTime).toLocaleString('en-US', {
             weekday: 'short',
             month: 'short',
             day: 'numeric',
@@ -215,8 +217,8 @@ For this workflow demonstration, automatically select the first available slot.
       patientContact: inputData.patientContact,
       specialty: inputData.specialty,
       selectedSlot: {
-        doctorId: selectedSlot.doctorId,
-        doctorName: selectedSlot.doctorName,
+        dentistId: selectedSlot.dentistId,
+        dentistName: selectedSlot.dentistName,
         dateTime: selectedSlot.dateTime,
       },
     };
@@ -238,7 +240,9 @@ const finalizeBooking = createStep({
     }
 
     // Import tools and create tenant-specific instances
-    const { createBookAppointmentTool, createSendConfirmationTool } = await import('../tools/booking');
+    const { createBookAppointmentTool, createSendConfirmationTool } = await import(
+      '../tools/booking'
+    );
 
     // TODO: Get tenantId from workflow context - for now hardcoded to ortofaccia
     const tenantId = 'ortofaccia';
@@ -255,6 +259,8 @@ const finalizeBooking = createStep({
         specialty: inputData.specialty,
         dateTime: inputData.selectedSlot.dateTime,
       },
+      runtimeContext: {} as any,
+      suspend: async () => {},
     });
 
     // Send confirmation
@@ -267,6 +273,8 @@ const finalizeBooking = createStep({
         specialty: inputData.specialty,
         dateTime: inputData.selectedSlot.dateTime,
       },
+      runtimeContext: {} as any,
+      suspend: async () => {},
     });
 
     return {

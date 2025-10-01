@@ -14,7 +14,7 @@ interface ConfirmationResult {
  * Factory function to create send confirmation tool for a specific tenant
  */
 export async function createSendConfirmationTool(tenantId: string) {
-  const tenant = await getTenant(tenantId);
+  const tenant = getTenant(tenantId);
 
   return createTool({
     id: 'send-confirmation',

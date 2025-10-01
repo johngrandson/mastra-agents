@@ -12,12 +12,12 @@ import { getTools } from './tool-registry';
  */
 export async function createAgent(agentId: string): Promise<Agent> {
   // Load agent configuration
-  const agentConfig = await getAgent(agentId);
+  const agentConfig = getAgent(agentId);
 
   console.log(`[agent-factory] Creating agent: ${agentId}, tenantId: ${agentConfig.tenantId}`);
 
   // Load tenant for context
-  const tenant = await getTenant(agentConfig.tenantId);
+  const tenant = getTenant(agentConfig.tenantId);
 
   // Build full instructions from prompt + instructions array
   const fullInstructions = [
@@ -34,9 +34,7 @@ export async function createAgent(agentId: string): Promise<Agent> {
   ].join('\n');
 
   // Get LLM model
-  const model = openai(agentConfig.llm.model, {
-    temperature: agentConfig.llm.temperature,
-  });
+  const model = openai(agentConfig.llm.model);
 
   // Get tools configured for this agent
   const tools = await getTools(agentConfig.tools, agentConfig.tenantId);
