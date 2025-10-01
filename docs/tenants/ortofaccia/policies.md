@@ -1,4 +1,4 @@
-# Políticas ORTOFACCIA
+# Políticas Ortofaccia
 
 ## Agendamento
 
@@ -76,7 +76,7 @@
 ### Política de Preços
 
 - Consulta inicial (Clínico Geral): R$ 150,00
-- **IMPORTANTE**: A ORTOFACCIA NÃO fornece orçamentos prévios
+- **IMPORTANTE**: A Ortofaccia NÃO fornece orçamentos prévios
 - Valores de procedimentos são informados durante a consulta
 - Pagamento deve ser combinado ANTES de agendar se houver necessidade de parcelamento
 

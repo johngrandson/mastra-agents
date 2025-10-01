@@ -1,4 +1,4 @@
-# Perguntas Frequentes - ORTOFACCIA
+# Perguntas Frequentes - Ortofaccia
 
 ## Sobre Atendimento
 
@@ -49,7 +49,7 @@ Depende do caso e da disponibilidade.
 
 ### Vocês fazem orçamento antes do tratamento?
 
-**NÃO.** A ORTOFACCIA **não fornece orçamentos prévios**. Os valores dos procedimentos são informados durante a consulta com o dentista.
+**NÃO.** A Ortofaccia **não fornece orçamentos prévios**. Os valores dos procedimentos são informados durante a consulta com o dentista.
 
 ### Quanto tempo de atestado vocês fornecem após procedimentos?
 
@@ -214,7 +214,7 @@ Sim, através de **cartão de crédito** (condições a combinar com a clínica)
 
 ### Vocês fazem reembolso?
 
-**NÃO.** A ORTOFACCIA não faz reembolso de procedimentos não realizados.
+**NÃO.** A Ortofaccia não faz reembolso de procedimentos não realizados.
 
 Procedimentos cancelados serão **remarcados**.
 

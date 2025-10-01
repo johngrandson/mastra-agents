@@ -1,8 +1,9 @@
-# Serviços ORTOFACCIA
+# Serviços Ortofaccia
 
 ## Odontologia Geral
 
 ### Clínico Geral
+
 - Consultas e avaliações completas (R$ 150,00)
 - Exame clínico detalhado
 - Diagnóstico odontológico
@@ -12,6 +13,7 @@
 - Extrações dentárias
 
 **Profissionais:**
+
 - Dra. Larissa Lucena
 - Dra. Maria Julia
 - Dra. Joelma Porto
@@ -19,6 +21,7 @@
 ## Ortodontia
 
 ### Aparelhos Ortodônticos
+
 - Aparelhos fixos metálicos
 - Aparelhos estéticos
 - Alinhadores transparentes
@@ -27,6 +30,7 @@
 **Especialista:** Dra. Maria Julia
 
 ### Tratamentos Oferecidos
+
 - Correção de mordida
 - Alinhamento dentário
 - Tratamento de maloclusão
@@ -35,6 +39,7 @@
 ## Estética Dental
 
 ### Procedimentos Estéticos
+
 - Clareamento dental
 - Facetas de porcelana
 - Laminados cerâmicos
@@ -42,10 +47,12 @@
 - Harmonização do sorriso
 
 **Especialistas:**
+
 - Dra. Larissa Lucena
 - Dra. Maria Julia
 
 ### Resultados
+
 - Sorriso mais branco e harmonioso
 - Correção de imperfeições
 - Aumento da autoestima
@@ -53,6 +60,7 @@
 ## Próteses Dentárias
 
 ### Tipos de Próteses
+
 - Próteses fixas (coroas e pontes)
 - Próteses removíveis
 - Próteses sobre implantes
@@ -61,6 +69,7 @@
 **Especialista:** Dra. Joelma Porto
 
 ### Indicações
+
 - Substituição de dentes perdidos
 - Restauração da função mastigatória
 - Melhora da estética facial
@@ -68,6 +77,7 @@
 ## Cirurgias Odontológicas
 
 ### Procedimentos Cirúrgicos
+
 - Extrações simples
 - Extrações de dentes inclusos
 - Cirurgias periodontais
@@ -76,6 +86,7 @@
 **Especialista:** Dra. Joelma Porto
 
 ### Cuidados
+
 - Orientações pré e pós-operatórias
 - Acompanhamento completo
 - Medicação adequada
@@ -83,11 +94,13 @@
 ## Radiologia Digital
 
 ### Exames Disponíveis
+
 - Raio-X panorâmico
 - Raio-X periapical
 - Documentação ortodôntica
 
 **Vantagens:**
+
 - Menor exposição à radiação
 - Imagens imediatas
 - Melhor qualidade diagnóstica
@@ -95,15 +108,18 @@
 ## Especialidades por Profissional
 
 ### Dra. Larissa Lucena
+
 - **Clínico Geral:** Atendimento completo, limpezas, restaurações
 - **Estética Dental:** Clareamento, facetas, harmonização do sorriso
 
 ### Dra. Maria Julia
+
 - **Clínico Geral:** Consultas, tratamentos gerais
 - **Ortodontia:** Aparelhos fixos e estéticos, alinhadores
 - **Estética Dental:** Procedimentos estéticos avançados
 
 ### Dra. Joelma Porto
+
 - **Clínico Geral:** Atendimento odontológico completo
 - **Prótese:** Próteses fixas, removíveis, sobre implantes
 - **Cirurgia:** Extrações, cirurgias periodontais
@@ -111,12 +127,15 @@
 ## Atendimento Especial
 
 ### Odontopediatria
+
 Atendimento adaptado para crianças com linguagem lúdica e ambiente acolhedor.
 
 ### Pacientes Ansiosos
+
 Técnicas de manejo de ansiedade e atendimento humanizado.
 
 ### Idosos
+
 Cuidados específicos para a terceira idade.
 
 ## Convênios Aceitos

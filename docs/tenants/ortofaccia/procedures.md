@@ -1,4 +1,4 @@
-# Procedimentos Odontológicos na ORTOFACCIA
+# Procedimentos Odontológicos na Ortofaccia
 
 ## Informações Pré-Procedimento
 
