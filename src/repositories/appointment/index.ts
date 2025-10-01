@@ -5,6 +5,5 @@
  * Dependency Inversion Principle (DIP)
  */
 
-export { IAppointmentRepository } from './appointment-repository.interface';
+export type { IAppointmentRepository } from './appointment-repository.interface';
 export { InMemoryAppointmentRepository } from './in-memory-appointment.repository';
-export { RedisAppointmentRepository } from './redis-appointment.repository';

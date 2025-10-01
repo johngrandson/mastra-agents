@@ -1,5 +1,5 @@
 import { IAppointmentRepository } from './appointment-repository.interface';
-import { Appointment } from '../../mastra/tools/booking/appointment-state';
+import { Appointment } from '../../types/appointment';
 
 /**
  * In-Memory Implementation of Appointment Repository

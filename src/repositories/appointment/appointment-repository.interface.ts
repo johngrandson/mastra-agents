@@ -1,4 +1,4 @@
-import { Appointment } from '../../mastra/tools/booking/appointment-state';
+import { Appointment } from '../../types/appointment';
 
 /**
  * Appointment Repository Interface
