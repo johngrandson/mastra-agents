@@ -2,6 +2,7 @@ import { openai } from '@ai-sdk/openai';
 import { Agent } from '@mastra/core/agent';
 import { Memory } from '@mastra/memory';
 import { LibSQLStore } from '@mastra/libsql';
+import { join } from 'path';
 import {
   checkAvailabilityTool,
   createBookAppointmentTool,
@@ -184,7 +185,9 @@ async function createBookingAgent(tenantId: string = 'ortofaccia') {
     },
     memory: new Memory({
       storage: new LibSQLStore({
-        url: 'file:../mastra.db',
+        url: process.env.MASTRA_CLOUD_STORAGE === 'true'
+          ? ':memory:' // Mastra Cloud manages storage
+          : `file:${join(process.cwd(), '.mastra', 'mastra.db')}`,
       }),
     }),
   });

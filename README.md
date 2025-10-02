@@ -1,6 +1,8 @@
-# Mastra Multi-Tenant AI Agents
+# 🤖 Horizon Agents - Multi-Tenant AI System
 
 Multi-tenant AI agent system powered by [Mastra.ai](https://mastra.ai) - Supporting multiple industries with RAG-powered intelligent agents.
+
+> **🚀 Ready for Mastra Cloud!** Este projeto está completamente preparado para deployment no Mastra Cloud com inicialização automática de knowledge base. Ver [DEPLOYMENT.md](./DEPLOYMENT.md) para guia completo.
 
 ## 🌟 Features
 

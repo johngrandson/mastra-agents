@@ -7,6 +7,8 @@
     "dev": "mastra dev",
     "build": "mastra build",
     "start": "mastra start",
+    "cloud-init": "tsx src/mastra/scripts/cloud-init.ts",
+    "postinstall": "npm run cloud-init || true",
     "seed-kb": "tsx src/mastra/scripts/seed-knowledge-base.ts",
     "lint": "eslint src --ext .ts",
     "lint:fix": "eslint src --ext .ts --fix",
