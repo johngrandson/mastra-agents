@@ -16,7 +16,7 @@ const appointmentRepository = new InMemoryAppointmentRepository();
 /**
  * Factory function to create book appointment tool for a specific tenant
  */
-export async function createBookAppointmentTool(tenantId: string) {
+export function createBookAppointmentTool(tenantId: string) {
   const tenant = getTenant(tenantId);
 
   return createTool({

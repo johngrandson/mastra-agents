@@ -10,7 +10,7 @@ import { getTools } from './tool-registry';
  * Creates a configured agent
  * Framework-agnostic core logic that can be ported to Next.js
  */
-export async function createAgent(agentId: string): Promise<Agent> {
+export function createAgent(agentId: string): Agent {
   // Load agent configuration
   const agentConfig = getAgent(agentId);
 
@@ -37,7 +37,7 @@ export async function createAgent(agentId: string): Promise<Agent> {
   const model = openai(agentConfig.llm.model);
 
   // Get tools configured for this agent
-  const tools = await getTools(agentConfig.tools, agentConfig.tenantId);
+  const tools = getTools(agentConfig.tools, agentConfig.tenantId);
 
   // Create memory storage
   // Determine correct path based on whether running from bundled output

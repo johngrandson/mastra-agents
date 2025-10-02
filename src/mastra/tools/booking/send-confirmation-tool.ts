@@ -13,7 +13,7 @@ interface ConfirmationResult {
 /**
  * Factory function to create send confirmation tool for a specific tenant
  */
-export async function createSendConfirmationTool(tenantId: string) {
+export function createSendConfirmationTool(tenantId: string) {
   const tenant = getTenant(tenantId);
 
   return createTool({

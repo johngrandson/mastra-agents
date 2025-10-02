@@ -10,7 +10,7 @@ const appointmentRepository = new InMemoryAppointmentRepository();
 /**
  * Factory function to create check patient appointments tool for a specific tenant
  */
-export async function createCheckPatientAppointmentsTool(tenantId: string) {
+export function createCheckPatientAppointmentsTool(tenantId: string) {
   const tenant = getTenant(tenantId);
 
   return createTool({

@@ -27,7 +27,7 @@ interface ToolDefinition {
   namespace: string;
   category?: string;
   instance?: any;
-  factory?: (tenantId: string) => Promise<any>;
+  factory?: (tenantId: string) => any;
 }
 
 /**
@@ -83,7 +83,7 @@ const TOOL_REGISTRY: Record<string, ToolDefinition> = {
     id: 'contract-analysis',
     namespace: 'legal',
     category: 'analysis',
-    factory: async (_tenantId: string) => {
+    factory: (_tenantId: string) => {
       // Placeholder implementation
       return {
         id: 'contract-analysis',
@@ -99,7 +99,7 @@ const TOOL_REGISTRY: Record<string, ToolDefinition> = {
     id: 'case-search',
     namespace: 'legal',
     category: 'search',
-    factory: async (_tenantId: string) => {
+    factory: (_tenantId: string) => {
       // Placeholder implementation
       return {
         id: 'case-search',
@@ -115,7 +115,7 @@ const TOOL_REGISTRY: Record<string, ToolDefinition> = {
     id: 'schedule-consultation',
     namespace: 'legal',
     category: 'scheduling',
-    factory: async (_tenantId: string) => {
+    factory: (_tenantId: string) => {
       // Placeholder implementation
       return {
         id: 'schedule-consultation',
@@ -189,29 +189,27 @@ function resolveBundles(toolNamesOrBundles: string[]): string[] {
  * @param tenantId - Tenant ID for tenant-specific tool configuration
  * @returns Array of instantiated tool objects
  */
-export async function getTools(toolNamesOrBundles: string[], tenantId: string): Promise<any[]> {
+export function getTools(toolNamesOrBundles: string[], tenantId: string): any[] {
   // Resolve bundles to individual tool names
   const toolNames = resolveBundles(toolNamesOrBundles);
 
-  const tools = await Promise.all(
-    toolNames.flatMap(async name => {
-      const toolDef = TOOL_REGISTRY[name];
-      if (!toolDef) {
-        console.warn(`Tool not found in registry: ${name}`);
-        return [];
-      }
+  const tools = toolNames.flatMap(name => {
+    const toolDef = TOOL_REGISTRY[name];
+    if (!toolDef) {
+      console.warn(`Tool not found in registry: ${name}`);
+      return [];
+    }
 
-      // If tool needs tenant context, use factory
-      if (toolDef.factory) {
-        return [await toolDef.factory(tenantId)];
-      }
+    // If tool needs tenant context, use factory
+    if (toolDef.factory) {
+      return [toolDef.factory(tenantId)];
+    }
 
-      // Otherwise use shared instance
-      return [toolDef.instance];
-    })
-  );
+    // Otherwise use shared instance
+    return [toolDef.instance];
+  });
 
-  return tools.flat();
+  return tools;
 }
 
 /**
