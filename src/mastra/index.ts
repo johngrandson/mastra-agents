@@ -22,6 +22,8 @@ function createTenantAgents() {
 function getStorageUrl(): string {
   // If MASTRA_CLOUD_STORAGE env is set, Mastra Cloud manages storage automatically
   if (process.env.MASTRA_CLOUD_STORAGE === 'true') {
+    console.log('Using Mastra Cloud managed storage.');
+
     return ':memory:'; // Mastra Cloud will override this
   }
 
